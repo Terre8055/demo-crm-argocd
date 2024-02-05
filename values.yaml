@@ -18,7 +18,7 @@ cert:
   config:
     email: michaelappiah2018@icloud.com #letsenccrypt clusterissuer email
     tls:
-      enabled: true
+      enabled: false
   clusterIssuerName: "letsencrypt-staging" 
 
 serviceCluster:
