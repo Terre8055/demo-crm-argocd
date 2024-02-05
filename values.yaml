@@ -22,7 +22,7 @@ cert:
   clusterIssuerName: "letsencrypt-staging" 
 
 serviceCluster:
-  enabled: false #toggle to use clusterIP AND ingressControllers or LoadBalancer service
+  enabled: true #toggle to use clusterIP AND ingressControllers or LoadBalancer service
 
 
 mongodb:
