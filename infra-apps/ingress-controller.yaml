@@ -5,12 +5,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:Terre8055/demo-crm-argocd.git
-    path: infra-apps/ingress-controller/ingress-nginx-4.9.1.tgz
-    targetRevision: HEAD
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    targetRevision: 14.7.2 
+    chart: ingress-nginx
     helm:
-      valueFiles:
-        - ingress-controller/values.yaml
+      releaseName: my-ingress-nginx 
+      valuesObject:
+        controller:
+          ingressClassResource:
+            default: true
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-ingress

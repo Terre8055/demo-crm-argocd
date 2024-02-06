@@ -5,12 +5,14 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:Terre8055/demo-crm-argocd.git
-    path: infra-apps/cert-manager/cert-manager-v1.13.3.tgz
-    targetRevision: HEAD
+    repoURL: https://charts.jetstack.io 
+    targetRevision: "v1.13.3" 
+    chart: cert-manager
     helm:
-      valueFiles:
-        - cert-manager/values.yaml
+      releaseName: cert-manager
+      parameters:
+        - name: installCRDs
+          value: "true"
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
