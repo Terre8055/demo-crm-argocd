@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:Terre8055/demo-crm-argocd.git
+    path: /infra-apps/cert-manager/cert-manager-v1.13.3.tgz
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - cert-manager/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cert-manager
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

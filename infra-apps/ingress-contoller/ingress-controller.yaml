@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ingress-controller
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:Terre8055/demo-crm-argocd.git
+    path: /infra-apps/ingress-controller/ingress-nginx-4.9.1.tgz
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - ingress-controller/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx-ingress
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
