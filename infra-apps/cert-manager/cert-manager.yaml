@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:Terre8055/demo-crm-argocd.git
-    path: /infra-apps/cert-manager/cert-manager-v1.13.3.tgz
+    path: infra-apps/cert-manager/cert-manager-v1.13.3.tgz
     targetRevision: HEAD
     helm:
       valueFiles:

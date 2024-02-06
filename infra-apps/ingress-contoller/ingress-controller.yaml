@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:Terre8055/demo-crm-argocd.git
-    path: /infra-apps/ingress-controller/ingress-nginx-4.9.1.tgz
+    path: infra-apps/ingress-controller/ingress-nginx-4.9.1.tgz
     targetRevision: HEAD
     helm:
       valueFiles:
