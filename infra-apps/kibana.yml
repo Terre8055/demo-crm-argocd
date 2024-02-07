@@ -10,10 +10,16 @@ spec:
     chart: kibana
     helm:
       releaseName: my-kibana
+      valuesObject:
+        ingress:
+          enabled: true
+          ingressClassName: "nginx"
+          path: /
+          pathType: Prefix
+          hostname: kibanady.chickenkiller.com
   destination:
     server: https://kubernetes.default.svc
     namespace: demo-crm-logging
-
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
