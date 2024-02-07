@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: https://helm.elastic.co
     targetRevision: 8.5.1
-    chart: elastic
+    chart: elasticsearch
     helm:
       releaseName: my-elastic
   destination:
