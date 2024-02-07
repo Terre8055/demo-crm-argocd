@@ -5,8 +5,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  https://charts.bitnami.com/bitnami
-    targetRevision: 10.8.4
+    repoURL:  https://helm.elastic.co
+    targetRevision: 8.5.1
     chart: kibana
     helm:
       releaseName: my-kibana
