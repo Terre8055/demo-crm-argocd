@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kibana
+spec:
+  project: default
+  source:
+    repoURL: https://helm.elastic.co
+    targetRevision: 8.5.1
+    chart: elastic
+    helm:
+      releaseName: kibana
+      valuesObject:
+        ingress:
+          enabled: true
+          ingressClassName: "nginx"
+          path: /
+          pathType: Prefix
+          hostname: kibanady.chickenkiller.com
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo-crm-logging
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
