@@ -1,27 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: elk-stack
+  name: kibana
 spec:
   project: default
   source:
     repoURL: https://helm.elastic.co
     targetRevision: 8.5.1
+    chart: kibana
     helm:
-      charts:
-        - chart: elastic
-          releaseName: my-elastic
-          version: 8.5.1
-        - chart: kibana
-          releaseName: my-kibana
-          version: 8.5.1
+      releaseName: my-kibana
   destination:
     server: https://kubernetes.default.svc
     namespace: demo-crm-logging
 
   syncPolicy:
     syncOptions:
-      - CreateNamespace=true
+    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
