@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kibana
+spec:
+  project: default
+  source:
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 10.8.4
+    chart: kibana
+    helm:
+      releaseName: my-kibana
+      valuesObject:
+        ingress:
+          enabled: true
+          ingressClassName: "nginx"
+          path: /
+          pathType: Prefix
+          hostname: kibanady.chickenkiller.com
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo-crm-logging
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
