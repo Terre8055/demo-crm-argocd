@@ -18,7 +18,7 @@ publicPort: 8089
 httpIngressClass: nginx
 cert:
   config:
-    email: michaelappiah2018@icloud.com
+    email: 8055cansave@gmail.com
     tls:
       enabled: true
   clusterIssuerName: "letsencrypt-prod" 
