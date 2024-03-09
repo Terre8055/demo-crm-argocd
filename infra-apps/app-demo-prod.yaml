@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:Terre8055/demo-crm.git
+    repoURL: git@github.com:Terre8055/demo-crm-argocd.git
     targetRevision: HEAD
     path: app/
     helm:
