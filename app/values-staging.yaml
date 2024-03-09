@@ -26,7 +26,7 @@ serviceCluster:
 
 
 mongodb:
-  replicaCount: 3
+  replicaCount: 2
   port: 27017
   replicaSetName: MainRepSet
   arbiter:
