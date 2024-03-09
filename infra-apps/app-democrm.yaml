@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: git@github.com:Terre8055/demo-crm-argocd.git
     targetRevision: HEAD
-    path: app/
+    path: staging/app/
     helm:
       valueFiles:
         - "values-staging.yaml"
