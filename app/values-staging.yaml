@@ -3,6 +3,9 @@ appName: demo-crm
 
 replicaCount: 1
 
+secretName: mongo-uri-secret
+
+
 ingressService:
   name: ingress
   host: hodesay.bounceme.net #host name for ingress 
