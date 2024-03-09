@@ -4,7 +4,7 @@ metadata:
   name: demo-crm
   namespace: argocd
 spec:
-  project: on-staging
+  project: staging
 
   source:
     repoURL: git@github.com:Terre8055/demo-crm-argocd.git
