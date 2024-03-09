@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: staging
+  project: default
   source:
     repoURL: git@github.com:Terre8055/demo-crm-argocd.git
     path: infra-apps/
