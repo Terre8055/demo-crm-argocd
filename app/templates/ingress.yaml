@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Values.ingressService.name }}
-  namespace: default
+  # namespace: default
   {{- if .Values.cert.config.tls.enabled }}
   annotations:
     cert-manager.io/cluster-issuer: {{ .Values.cert.clusterIssuerName | default  "letsencrypt-staging" }}

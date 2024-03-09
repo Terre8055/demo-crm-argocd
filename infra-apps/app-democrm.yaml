@@ -4,15 +4,18 @@ metadata:
   name: demo-crm
   namespace: argocd
 spec:
-  project: default
+  project: on-staging
 
   source:
     repoURL: git@github.com:Terre8055/demo-crm-argocd.git
     targetRevision: HEAD
     path: app/
+    helm:
+      valueFiles:
+        - "values-staging.yaml"
   destination: 
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: staging
 
   syncPolicy:
     syncOptions:

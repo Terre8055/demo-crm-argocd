@@ -1,7 +1,7 @@
 name: demo-crm-deployment
 appName: demo-crm
 
-replicaCount: 2
+replicaCount: 1
 
 ingressService:
   name: ingress
@@ -16,9 +16,9 @@ publicPort: 8089
 httpIngressClass: nginx
 cert:
   config:
-    email: michaelappiah2018@icloud.com #letsenccrypt clusterissuer email
+    email: michaelappiah2018@icloud.com
     tls:
-      enabled: true
+      enabled: false
   clusterIssuerName: "letsencrypt-staging" 
 
 serviceCluster:
