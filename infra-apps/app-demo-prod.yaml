@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:Terre8055/demo-crm-prod.git
+    repoURL: git@github.com:Terre8055/demo-crm.git
     targetRevision: HEAD
     path: app/
     helm:
