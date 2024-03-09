@@ -27,7 +27,7 @@ spec:
             - name: MONGODB_URI
               valueFrom:
                 secretKeyRef:
-                  name: mongo-uri-secret
+                  name: {{ .Values.secretName }}
                   key: uri
           resources:
             limits:
