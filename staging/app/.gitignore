@@ -1,0 +1,15 @@
+check/
+TheK8sBook/
+.drawio
+.png
+.zip
+headless-svc-mongo.yaml
+mongo-sts.yaml
+configmap.yaml
+mongo-secret.yaml
+mongo-uri-secret.yaml
+rs.txt
+service-nginx.yaml
+demo-crm-bounceme/
+mongo-secret-prod.yaml
+mongo-uri-secret-prod.yaml
