@@ -3,6 +3,8 @@ appName: demo-crm-prod
 
 replicaCount: 2
 
+secretName: mongo-uri-secret-prod
+
 ingressService:
   name: ingress
   host: hodesay.onthewifi.com #host name for ingress 
@@ -11,7 +13,7 @@ ingressService:
     hosts:
     - hodesay.onthewifi.com
 
-publicPort: 8089
+publicPort: 8090
 
 httpIngressClass: nginx
 cert:
