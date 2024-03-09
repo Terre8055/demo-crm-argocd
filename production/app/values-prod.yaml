@@ -21,7 +21,7 @@ cert:
     email: michaelappiah2018@icloud.com
     tls:
       enabled: true
-  clusterIssuerName: "letsencrypt-staging" 
+  clusterIssuerName: "letsencrypt-prod" 
 
 serviceCluster:
   enabled: true #toggle to use clusterIP AND ingressControllers or LoadBalancer service
