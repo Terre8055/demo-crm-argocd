@@ -11,3 +11,5 @@ mongo-uri-secret.yaml
 rs.txt
 service-nginx.yaml
 demo-crm-bounceme/
+mongo-secret-prod.yaml
+mongo-uri-secret-prod.yaml
