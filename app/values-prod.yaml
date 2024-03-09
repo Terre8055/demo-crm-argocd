@@ -13,7 +13,7 @@ ingressService:
     hosts:
     - hodesay.onthewifi.com
 
-publicPort: 8090
+publicPort: 8089
 
 httpIngressClass: nginx
 cert:
